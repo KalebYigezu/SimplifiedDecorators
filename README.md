@@ -1,0 +1,2 @@
+# SimplifiedDecorators
+Modifying a Function
