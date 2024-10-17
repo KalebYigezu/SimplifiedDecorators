@@ -52,3 +52,21 @@ def fine(num):
 
 
 fine(101)
+----------------------------------------------
+           Class Decorator
+
+class AddDec:
+    def __init__(self,func):
+        self.func=func
+
+    def __call__(self, *args, **kwargs):
+        result=self.func(*args, **kwargs)
+        return result * 2
+
+
+@AddDec
+def add(a, b):
+    return a+b
+
+
+print(add(2, 3))
