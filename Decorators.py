@@ -31,3 +31,24 @@ def div(a, b):
     
     
 div(8, 0)
+
+--------------------------------------------
+     Best Real Life Decorator Example 
+
+
+def really_fine(func):
+    def inner(*args, **kwargs):
+        if args[0] > 100:
+            print("Bro, don't be greedy")
+        else:
+            func(*args, **kwargs)
+
+    return inner
+
+
+@really_fine
+def fine(num):
+    print("Fine")
+
+
+fine(101)
