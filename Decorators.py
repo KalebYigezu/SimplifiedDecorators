@@ -37,11 +37,11 @@ div(8, 0)
 
 
 def really_fine(func):
-    def inner(*args, **kwargs):
-        if args[0] > 100:
+    def inner(num):
+        if num > 100:
             print("Bro, don't be greedy")
         else:
-            func(*args, **kwargs)
+            print("Fine")
 
     return inner
 
